@@ -5,47 +5,28 @@ package robot;
  */
 public class Status {
 
-    private StringBuilder step;
-    private int x, y, res;
+    public String step;
+    public int x, y, res, dir, mtx[][];
 
-    public Status() {
-        step = new StringBuilder();
-        x = y = res = 0;
-    }
-
-    public StringBuilder getStep() {
-        return step;
-    }
-
-    public void setStep(StringBuilder step) {
-        this.step = step;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
+    public Status(int x, int y, int res, int mtx[][]) {
+        this.step = "";
         this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
         this.y = y;
-    }
-
-    public int getRes() {
-        return res;
-    }
-
-    public void setRes(int res) {
         this.res = res;
+        this.dir = 0;
+        this.mtx = mtx;
     }
 
-    public void addRes(int add) {
-        this.res += add;
+    public boolean goUp() {
+        return false;
+    }
+    public boolean goDown() {
+        return false;
+    }
+    public boolean goLeft() {
+        return false;
+    }
+    public boolean goRight() {
+        return false;
     }
 }
